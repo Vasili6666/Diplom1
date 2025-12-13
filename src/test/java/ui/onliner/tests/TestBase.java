@@ -2,6 +2,7 @@ package ui.onliner.tests;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
+import org.junit.jupiter.api.BeforeEach;
 import ui.onliner.helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
@@ -14,6 +15,16 @@ import java.util.Map;
 import java.util.Properties;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
+/*
+
+
+Команда	Что запускает
+        ./gradlew clean test	Все тесты
+        ./gradlew clean smoke_test	Только smoke тесты (3 теста из OnlinerMainPageTest)
+
+
+*/
+
 
 public class TestBase {
 
@@ -24,7 +35,7 @@ public class TestBase {
         Configuration.browserVersion = System.getProperty("browserVersion", "128.0");
         Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
 
-        // Исправление: правильно проверяем пустую строку
+
         String remoteParam = System.getProperty("remoteUrl");
         if (remoteParam != null && !remoteParam.trim().isEmpty()) {
             Configuration.remote = remoteParam;
@@ -37,12 +48,17 @@ public class TestBase {
         Configuration.pageLoadStrategy = "eager";
         Configuration.timeout = 10000;
 
+
+    }
+
+    @BeforeEach
+    void addListener() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
     }
 
     private static String getLocalUrl() throws Exception {
         Properties props = new Properties();
-        props.load(new FileInputStream("local.properties"));
+        props.load(new FileInputStream("src/test/resources/config/local.properties"));
 
         return "https://" +
                 props.getProperty("SELENOID_USER") + ":" +
