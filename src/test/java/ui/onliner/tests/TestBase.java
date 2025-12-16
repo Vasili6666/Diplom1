@@ -16,7 +16,7 @@ import java.util.Properties;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 /*
-
+https://jenkins.autotests.cloud/job/Diplom1VasiliP/
 
 Команда	Что запускает
         ./gradlew clean test	Все тесты

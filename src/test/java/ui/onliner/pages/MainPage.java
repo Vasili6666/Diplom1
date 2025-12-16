@@ -9,16 +9,12 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class MainPage {
 
-
     private final SelenideElement catalogLink = $("a[href='https://catalog.onliner.by/notebook']");
     private final SelenideElement acceptCookiesButton = $(byText("Принимаю"));
     private final SelenideElement logoElement = $(".onliner_logo");
     private final SelenideElement cleverLink = $(".b-top-navigation-clover");
     private final SelenideElement ageRestriction = $(".b-top-navigation-age");
     private final SelenideElement marketplaceButton = $("a.b-main-navigation__link[href='https://baraholka.onliner.by/']");
-    private final SelenideElement marketplaceTitle = $("h1.m-title-i");
-
-
 
     @Step("Открыть главную страницу Onliner.by")
     public MainPage openMainPage() {
@@ -31,37 +27,22 @@ public class MainPage {
     public MainPage acceptCookies() {
         sleep(3000);
 
-        // Точное название кнопки
         if ($(byText("Принять все cookie")).exists()) {
             $(byText("Принять все cookie")).click();
             System.out.println("✅ Приняли куки: 'Принять все cookie'");
         }
 
-        sleep(1000); // Ждем после клика
+        sleep(1000);
         return this;
     }
 
     @Step("Перейти в раздел 'Барахолка'")
     public void goToMarketplace() {
-
         marketplaceButton
                 .shouldBe(visible, enabled)
                 .scrollIntoView(true)
                 .click();
-
         sleep(3000);
-    }
-
-    @Step("Проверить заголовок 'Барахолка' на странице")
-    public void verifyMarketplaceTitle() {
-        marketplaceTitle.shouldHave(text("Барахолка"));
-    }
-
-    @Step("Перейти и проверить раздел 'Барахолка'")
-    public MainPage goAndVerifyMarketplace() {
-        goToMarketplace();
-        verifyMarketplaceTitle();
-        return this;
     }
 
     @Step("Перейти в раздел 'Ноутбуки'")

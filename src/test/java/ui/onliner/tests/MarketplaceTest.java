@@ -5,6 +5,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import ui.onliner.pages.MainPage;
+import ui.onliner.pages.MarketplacePage;
 
 @Epic("Onliner.by E-commerce")
 @Feature("Навигация по сайту")
@@ -13,8 +14,8 @@ import ui.onliner.pages.MainPage;
 @Tag("smoke")
 public class MarketplaceTest extends TestBase {
 
-
     private final MainPage mainPage = new MainPage();
+    private final MarketplacePage marketplacePage = new MarketplacePage();
 
     @Test
     @DisplayName("Проверка раздела 'Барахолка'")
@@ -22,7 +23,8 @@ public class MarketplaceTest extends TestBase {
     void marketplaceSimpleTest() {
         mainPage.openMainPage()
                 .acceptCookies()
-                .goAndVerifyMarketplace();
+                .goToMarketplace();
 
+        marketplacePage.verifyMarketplaceTitle();
     }
 }

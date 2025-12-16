@@ -2,14 +2,15 @@ package ui.onliner.tests;
 
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import ui.onliner.pages.MainPage;
-import org.junit.jupiter.api.Tag;
 
 @Epic("Onliner.by E-commerce")
 @Feature("Главная страница")
 @Story("Базовые элементы интерфейса")
 @Owner("Vasili Platonau")
+@Tag("smoke") // Теперь тег на уровне класса
 public class OnlinerMainPageTest extends TestBase {
 
     private final MainPage mainPage = new MainPage();
@@ -19,7 +20,6 @@ public class OnlinerMainPageTest extends TestBase {
     @Description("Проверка видимости основного логотипа сайта")
     @Severity(SeverityLevel.BLOCKER)
     @Link(name = "Onliner.by", url = "https://www.onliner.by")
-    @Tag("smoke")
     void logoIsDisplayedOnMainPage() {
         mainPage.openMainPage()
                 .acceptCookies()
@@ -31,7 +31,6 @@ public class OnlinerMainPageTest extends TestBase {
     @Description("Проверка что ссылка на рассрочку 'Клевер' присутствует в навигации")
     @Severity(SeverityLevel.NORMAL)
     @Link(name = "Onliner.by", url = "https://www.onliner.by")
-    @Tag("smoke")
     void cleverLinkIsDisplayedOnMainPage() {
         mainPage.openMainPage()
                 .acceptCookies()
@@ -43,7 +42,6 @@ public class OnlinerMainPageTest extends TestBase {
     @Description("Проверка что значок возрастного ограничения присутствует")
     @Severity(SeverityLevel.NORMAL)
     @Link(name = "Onliner.by", url = "https://www.onliner.by")
-    @Tag("smoke")
     void ageRestrictionIsDisplayedOnMainPage() {
         mainPage.openMainPage()
                 .acceptCookies()
