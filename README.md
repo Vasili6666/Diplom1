@@ -60,7 +60,6 @@ ____
 
 * <a href="#video">Примеры видео выполнения тестов на Selenoid</a>
 
-* <a href="#androidvideo">Примеры видео выполнения тестов на эмуляторе Android Studio</a>
 ____
 <a id="cases"></a>
 ## <a name="Примеры автоматизированных тест-кейсов">**Примеры автоматизированных тест-кейсов:**</a>
@@ -154,9 +153,3 @@ ____
 <img title="Selenoid Video" src="images/video/UI.gif" width="550" height="350"  alt="video">   
 </p>
 
-<a id="androidvideo"></a>
-## <img alt="Selenoid" height="25" src="images/logo/AndroidStudio.png" width="25"/></a> Примеры видео выполнения тестов на эмуляторе Android Studio
-____
-<p align="center">
-<img title="Selenoid Video" src="images/video/Android.gif" width="350" height="750"  alt="video">   
-</p>
