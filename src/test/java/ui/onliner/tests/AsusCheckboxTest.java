@@ -16,8 +16,8 @@ public class AsusCheckboxTest extends TestBase {
     private final CatalogPage catalogPage = new CatalogPage();
 
     @Test
-    @DisplayName("Проверка фильтрации ноутбуков по производителю ASUS")
-    @Description("Выбор чекбокса ASUS и проверка наличия товаров ASUS")
+    @DisplayName("Проверка фильтрации ноутбуков по производителю")
+    @Description("Выбор чекбокса ASUS и проверка наличия товаров")
     @Severity(SeverityLevel.NORMAL)
     @Link(name = "Onliner.by", url = "https://www.onliner.by")
     void asusFilterTest() {

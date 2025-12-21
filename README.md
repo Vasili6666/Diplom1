@@ -1,41 +1,18 @@
 ﻿
 # Школа QA_GURU. Поток 37. Дипломный проект. 
-# Автоматизация тестирования для:
-# 1. UI-тест [<img src="images/logo/onliner.png" alt="Логотип" width="100">](https://www.onliner.by/)
+# Данный проект состоит из трех частей:
+# 1. <a href="#part1-3"> UI-тест </a> [<img src="images/logo/onliner.png" alt="Логотип" width="100">](https://www.onliner.by/)
 
 > Onliner.by — это крупнейший белорусский интернет-порта́л и онлайн-магазин
-# 2. API-тест [<img src="images/logo/jsonplaceholder.png" alt="Логотип" width="200">](https://jsonplaceholder.typicode.com/) 
+# 2. <a href="https://github.com/Vasili6666/Diplom2"> API-тест </a>[<img src="images/logo/jsonplaceholder.png" alt="Логотип" width="200">](https://jsonplaceholder.typicode.com/) 
 
 > JSONPlaceholder — это фейковое REST API для тестирования и прототипирования.
-# 3. Mobile-тест [<img src="images/logo/SQL.png" alt="Логотип" width="50">](https://play.google.com/store/apps/details?id=randomappsinc.com.sqlpracticeplus&hl=ru)
+# 3. <a href="https://github.com/Vasili6666/Diplom3"> Mobile-тест</a> [<img src="images/logo/SQL.png" alt="Логотип" width="50">](https://play.google.com/store/apps/details?id=randomappsinc.com.sqlpracticeplus&hl=ru)
 
 > SQL Practice PRO — Мобильное приложение. Практические упражнения на языке SQL.
 
-## **Содержание:**
-____
-
-* <a href="#tools">Технологии и инструменты</a>
-
-* <a href="#cases">Примеры автоматизированных тест-кейсов</a>
-
-* <a href="#jenkins">Сборка в Jenkins</a>
-
-* <a href="#console">Запуск из терминала</a>
-
-* <a href="#allure">Allure отчет</a>
-
-* <a href="#jira">Интеграция с Jira</a>
-
-* <a href="#testops">Интеграция с Allure TestOps</a>
-
-* <a href="#telegram">Уведомление в Telegram при помощи бота</a>
-
-* <a href="#video">Примеры видео выполнения тестов на Selenoid</a>
-
-* <a href="#androidvideo">Примеры видео выполнения тестов на эмуляторе Android Studio</a>
-____
-<a id="tools"></a>
-## <a name="Технологии и инструменты">**Технологии и инструменты:**</a>
+----
+# В проекте применены следующие технологии и инструменты
 
 <p align="center">  
 <a href="https://github.com/allure-framework/allure2"> <img src="images/logo/Allure.svg" width="50" height="50" alt="Allure"></a>
@@ -57,22 +34,46 @@ ____
 </p>
 
 ____
+<a id="part1-3"></a>
+# Часть 1/3
+#  UI-тест [<img src="images/logo/onliner.png" alt="Логотип" width="100">](https://www.onliner.by/)
+
+
+## **Содержание:**
+____
+
+
+
+* <a href="#cases">Примеры автоматизированных тест-кейсов</a>
+
+* <a href="#jenkins">Сборка в Jenkins</a>
+
+* <a href="#console">Запуск из терминала</a>
+
+* <a href="#allure">Allure отчет</a>
+
+* <a href="#jira">Интеграция с Jira</a>
+
+* <a href="#testops">Интеграция с Allure TestOps</a>
+
+* <a href="#telegram">Уведомление в Telegram при помощи бота</a>
+
+* <a href="#video">Примеры видео выполнения тестов на Selenoid</a>
+
+* <a href="#androidvideo">Примеры видео выполнения тестов на эмуляторе Android Studio</a>
+____
 <a id="cases"></a>
 ## <a name="Примеры автоматизированных тест-кейсов">**Примеры автоматизированных тест-кейсов:**</a>
 ____
--  *UI-тест.*
-   - *Проверка добавление в корзину товара(ноутбук).*
-   - *Проверка удаление товара из корзины*
--  *API-тест*
-   - *Получение поста по ID*
-   - *Изменение поста с Lombok*
-   - *Получаем всех пользователей*
-   - *Получаем пользователя по ID*
-   - *Получаем пользователя по неверному ID*
-   - *Создание нового поста*
-   - *Удаление поста*
--  *Мобильный тест*
-   - *Проверка правильности выполнения SQL-запроса*
+
+   - *Добавление и удаление товаров из корзины*
+   - *Проверка фильтрации ноутбуков по производителю*
+   - *Проверка открытия раздела 'Барахолка'*
+   - *Проверка видимости основного логотипа сайта*
+   - *Проверка отображения Возрастного ограничения '18+'главной странице*
+   - *Проверка отображения Ссылки 'Onlíner Клевер' на главной странице*
+   - *Выбор чекбокса Prime и проверка наличия логотипа Prime у первого товара*
+
 
 
 
@@ -81,21 +82,17 @@ ____
 ## <img alt="Jenkins" height="25" src="images/logo/Jenkins.svg" width="25"/></a><a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/vplatonov-TempoPizza)</a>
 ____
 
-- ui_test  - Тест WEB
-- api_test -  Тест API
-- !!! mobile_test - Только локальный запуск.
 
 ### **Параметры сборки в Jenkins:**
 
 - *TASK*
-- - *ui_test* - Тест WEB
-- - *api_test* - Тест API
-- - *!!! mobile_test* - Только локальный запуск.
+- - *test* - Все тесты
+- - *smoke_test* - Тесты с тэгом "Smoke"
+
 - *BROWSER (браузер, по умолчанию chrome)*
 - *BROWSER_VERSION (Версия браузера)*
 - *BROWSER_SIZE (размер окна браузера, по умолчанию 1920x1080)*
 - *UI_BASE_URL (Сайт для UI-теста)*
-- *API_BASE_URL (Сайт для API-теста)*
 - *TELEGRAM_TOKEN (Токен Телеграм-бота)*
 - *SELENOID_USER, SELENOID_PASS (логин, пароль для удаленного сервера Selenoid)*
 
@@ -103,17 +100,13 @@ ____
 ## Команды для запуска из терминала
 ___
 ***Локальный запуск:***
-- UI-тест
+- Все тесты
 ```bash  
-gradle clean ui_test
+gradle clean test
 ```
-- API-тест
+- Smoke-тестs
 ```bash  
-gradle clean api_test
-```
-- Мобильный тест
-```bash  
-gradle clean mobile_test
+gradle clean smoke_test
 ```
 
 ___
@@ -124,40 +117,24 @@ ___
 ### *UI-тест*
 
 <p align="center">  
-<img title="Allure Overview Dashboard" src="images/screenshots/AllureUI1.png" width="850"> 
-<img title="Allure Overview Dashboard" src="images/screenshots/AllureUI2.png" width="850"> 
+<img title="Allure Overview Dashboard" src="images/screenshots/uiallure1.png" width="850"> 
+<img title="Allure Overview Dashboard" src="images/screenshots/uiallure2.png" width="850"> 
 </p>  
 
-### *API-тест*
 
-<p align="center">  
-<img title="Allure Overview Dashboard" src="images/screenshots/AllureApi1.png" width="850"> 
-<img title="Allure Overview Dashboard" src="images/screenshots/AllureApi2.png" width="850"> 
-</p>  
-
-### *Mobile-тест*
-
-<p align="center">  
-<img title="Allure Overview Dashboard" src="images/screenshots/Mobile1.png" width="850"> 
-<img title="Allure Overview Dashboard" src="images/screenshots/Mobile2.png" width="850"> 
-</p>  
 
 ----
 <a id="jira"></a>
 ## <img alt="Jira" height="25" src="images/logo/Jira.svg" width="25"/></a> <a name="Jira"></a>Интеграция с Jira</a>
 <p align="center">  
-<img title="Jira Dashboard" src="images/screenshots/Jira1.png" width="850"> 
-<img title="Jira Dashboard" src="images/screenshots/Jira2.png" width="850"> 
+<img title="Jira Dashboard" src="images/screenshots/uijira2.png" width="850"> 
 </p>
 
 ----
 <a id="testops"></a>
 ## <img alt="TestOps" height="25" src="images/logo/Allure2.svg" width="25"/></a> <a name="TestOps"></a>Интеграция с TestOps</a>
 <p align="center">  
-<img title="TestOps Dashboard" src="images/screenshots/TestOps1.png" width="850"> 
-<img title="TestOps Dashboard" src="images/screenshots/TestOps2.png" width="850"> 
-<img title="TestOps Dashboard" src="images/screenshots/TestOps3.png" width="850"> 
-<img title="TestOps Dashboard" src="images/screenshots/TestOps4.png" width="850"> 
+<img title="TestOps Dashboard" src="images/screenshots/uiTestOps1.png" width="850"> 
 </p>  
 
 ----
@@ -167,9 +144,7 @@ ____
 <p align="center">  
 <img title="TelegramBot" src="images/screenshots/Telegram1.png" width="550">  
 </p>
-<p align="center">  
-<img title="TelegramBot" src="images/screenshots/Telegram2.png" width="550">  
-</p>
+
 
 ____
 <a id="video"></a>

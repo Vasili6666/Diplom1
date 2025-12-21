@@ -18,7 +18,7 @@ public class MarketplaceTest extends TestBase {
     private final MarketplacePage marketplacePage = new MarketplacePage();
 
     @Test
-    @DisplayName("Проверка раздела 'Барахолка'")
+    @DisplayName("Проверка открытия раздела 'Барахолка'")
     @Severity(SeverityLevel.NORMAL)
     void marketplaceSimpleTest() {
         mainPage.openMainPage()
