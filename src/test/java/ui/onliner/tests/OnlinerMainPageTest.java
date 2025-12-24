@@ -10,7 +10,7 @@ import ui.onliner.pages.MainPage;
 @Feature("Главная страница")
 @Story("Базовые элементы интерфейса")
 @Owner("Vasili Platonau")
-@Tag("smoke") // Теперь тег на уровне класса
+@Tag("smoke")
 public class OnlinerMainPageTest extends TestBase {
 
     private final MainPage mainPage = new MainPage();

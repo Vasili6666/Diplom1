@@ -78,7 +78,7 @@ ____
 
 ____
 <a id="jenkins"></a>
-## <img alt="Jenkins" height="25" src="images/logo/Jenkins.svg" width="25"/></a><a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/vplatonov-TempoPizza)</a>
+## <img alt="Jenkins" height="25" src="images/logo/Jenkins.svg" width="25"/></a><a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/Diplom1VasiliP/)</a>
 ____
 
 
@@ -110,7 +110,7 @@ gradle clean smoke_test
 
 ___
 <a id="allure"></a>
-## <img alt="Allure" height="25" src="images/logo/Allure.svg" width="25"/></a> <a name="Allure"></a>Allure отчет</a>
+## <img alt="Allure" height="25" src="images/logo/Allure.svg" width="25"/></a> <a name="Allure"></a>[Allure](https://jenkins.autotests.cloud/job/Diplom1VasiliP/8/allure/) отчет</a>
 ___
 
 ### *UI-тест*
@@ -124,14 +124,14 @@ ___
 
 ----
 <a id="jira"></a>
-## <img alt="Jira" height="25" src="images/logo/Jira.svg" width="25"/></a> <a name="Jira"></a>Интеграция с Jira</a>
+## <img alt="Jira" height="25" src="images/logo/Jira.svg" width="25"/></a> <a name="Jira"></a>Интеграция с [Jira](https://jira.autotests.cloud/browse/HOMEWORK-1554)</a>
 <p align="center">  
 <img title="Jira Dashboard" src="images/screenshots/uijira2.png" width="850"> 
 </p>
 
 ----
 <a id="testops"></a>
-## <img alt="TestOps" height="25" src="images/logo/Allure2.svg" width="25"/></a> <a name="TestOps"></a>Интеграция с TestOps</a>
+## <img alt="TestOps" height="25" src="images/logo/Allure2.svg" width="25"/></a> <a name="TestOps"></a>Интеграция с [TestOps](https://allure.autotests.cloud/launch/50472/tree?search=W3siaWQiOiJzdGF0dXMiLCJ0eXBlIjoidGVzdFN0YXR1c0FycmF5IiwidmFsdWUiOlsicGFzc2VkIl19XQ%3D%3D&treeId=9649)</a>
 <p align="center">  
 <img title="TestOps Dashboard" src="images/screenshots/uiTestOps1.png" width="850"> 
 </p>  

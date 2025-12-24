@@ -9,7 +9,6 @@ public class ProductPage {
 
     private final SelenideElement productTitle = $("h1.catalog-masthead__title");
     private final SelenideElement pricesLink = $("a[href*='/prices']");
-    private final SelenideElement buyButton = $(".offers-list__button_cart.button-style_expletive");
     private final SelenideElement goToCartButton = $(byText("Перейти в корзину"));
 
     @Step("Получить полное название товара")

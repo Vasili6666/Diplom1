@@ -10,7 +10,6 @@ import static com.codeborne.selenide.Selenide.*;
 public class MainPage {
 
     private final SelenideElement catalogLink = $("a[href='https://catalog.onliner.by/notebook']");
-    private final SelenideElement acceptCookiesButton = $(byText("Принимаю"));
     private final SelenideElement logoElement = $(".onliner_logo");
     private final SelenideElement cleverLink = $(".b-top-navigation-clover");
     private final SelenideElement ageRestriction = $(".b-top-navigation-age");
